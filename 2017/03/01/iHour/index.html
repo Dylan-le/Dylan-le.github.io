@@ -13,11 +13,11 @@
 
     <title>
         
-          标签 - 乐成的博客 | Dylan Blog
+          iHour：每天进步一点点 - 乐成的博客 | Dylan Blog
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/tags/">
+    <link rel="canonical" href="http://yoursite.com/2017/03/01/iHour/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -151,160 +151,229 @@
 
     <!-- Main Content -->
     
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/tag-bg.jpg')">
+<!-- Image to hack wechat -->
+<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('iHour_bg.jpg')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>标签</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">Hey, this is Tags.</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#产品相关" title="产品相关">产品相关</a>
+                        
+                    </div>
+                    <h1>iHour：每天进步一点点</h1>
+                    <h2 class="subheading">App推荐</h2>
+                    <span class="meta">
+                        Posted by Dylan on
+                        2017-03-01
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-            <div id='tag_cloud' class="tags">
-                
-                    <a href="#读书" title="读书" rel="3">读书</a>
-                
-                    <a href="#产品相关" title="产品相关" rel="1">产品相关</a>
-                
-                    <a href="#闲谈" title="闲谈" rel="1">闲谈</a>
-                
-            </div>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-            <!-- 标签列表 -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="读书">
-                    <span class="tag-text">读书</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2016/11/16/Amercian-Dollar/">
-                        <h2 class="post-title">
-                            强弱势美元“薅羊毛”的例子
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                总结李老师的上课内容
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2016/12/09/NeedPhone/">
-                        <h2 class="post-title">
-                            由一篇短篇小说想到的
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                读马尔克斯的短篇小说集
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2016/11/28/Brooklyn/">
-                        <h2 class="post-title">
-                            荒唐背后的阳光
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                读《布鲁克林的荒唐事》
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="产品相关">
-                    <span class="tag-text">产品相关</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2017/03/01/iHour/">
-                        <h2 class="post-title">
-                            iHour：每天进步一点点
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                App推荐
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="闲谈">
-                    <span class="tag-text">闲谈</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2017/01/11/我的这一年/">
-                        <h2 class="post-title">
-                            我的这一年
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                迟来的2016年总结
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
+                <p>大学生涯迎来了最后一学期，为了让自己最后阶段的生活过得更加充实，我也是给自己设定了一些笼统的小目标，例如：阅读英文原著、练习英语口语、坚持健身等。但是光有目标是不够的，如果能有一个软件可以<strong>纪录自己在这个目标上投入了多少时间和精力</strong>，把过程量化，那就挺棒了！</p>
+<p>经过一番寻觅，我还真发现了这样一款软件：<strong>【iHour】</strong>，它是由四叶草新媒体公司开发的，也是ios平台上的经典应用“days matter”的开发商，这个公司还开发了很多有意思的产品，这里截个图给大家感受一下</p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/19696905-file_1488379853519_127c5.jpg" alt=""></p>
+<p>这个公司的产品做得感觉都挺有意思，我会慢慢把它们都下载下来体验一番。</p>
+<p>再说回iHour。在AppStore上，iHour有一个副标题叫“10000小时养成计划”，而这应该是引自著名的“一万小时定律”。作家格拉德维尔在《异类》中指出</p>
+<blockquote>
+<p>人们眼中的天才之所以卓越非凡，并非天资超人一等，而是付出了持续不断的努力。一万小时的锤炼是任何人从平凡变成世界级大师的必要条件</p>
+</blockquote>
+<p>所以iHour也就是用来记录这“一万个小时”的软件。</p>
+<hr>
+<h3 id="简单易用"><a href="#简单易用" class="headerlink" title="简单易用"></a>简单易用</h3><p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/96441786-file_1488379852274_16b9b.jpg" alt=""></p>
+<p>上面的截图是iHour首页的情况，显示你在完成各个小目标的过程中的时间投入情况，没有多余的东西。当你有了一个小目标之后，你可以点击右上角的【+】号来新建一个项目</p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/77710012-file_1488379851811_ef34.jpg" alt=""></p>
+<p>设定好名称和图标之后，“一万个小时”的旅程就开始了！</p>
+<p>每天，你可以在“Today”界面，看到等待你去征服的小目标</p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/47927449-file_1488379853122_d760.jpg" alt=""></p>
+<p>当你今天为某个小目标投入了时间时，你可以点击项目右边的【+】号或者点击项目本身，来手动添加投入的时间，而在记录之后，该项目就会变成灰色</p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/24820937-file_1488379852068_82d5.jpg" alt=""></p>
+<p>当然，如果你觉得手动添加时间麻烦的话，也可以选择App提供的计时功能来帮你添加，计时功能分为正计时和倒计时，这也可以帮助你更准确的掌握投入时间</p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/55068325-file_1488379853697_d7b4.jpg" alt=""></p>
+<h3 id="丰富的统计"><a href="#丰富的统计" class="headerlink" title="丰富的统计"></a>丰富的统计</h3><p>项目统计、历史统计、每日统计、每周统计、每月统计……多种多样丰富的统计方式，可以让你对自己的时间投入情况有全方位的掌握</p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/82941706-file_1488379852674_6098.jpg" alt=""></p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/747586-file_1488379852485_9d19.jpg" alt=""></p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/5538642-file_1488379853331_16481.jpg" alt=""></p>
+<h3 id="有趣的成就里程碑"><a href="#有趣的成就里程碑" class="headerlink" title="有趣的成就里程碑"></a>有趣的成就里程碑</h3><p>除了基本的计时和统计功能，iHour还设计了一系列的成就里程碑，可以在记录时间的同时，享受类似于升级通关的快感，或者是收集的快感。同时，一些里程碑还能起到监督的作用(像是“一声叹息”里程碑等），毕竟，没有人愿意获得太多负面的里程碑（有特殊喜好的除外，哈哈）</p>
+<p><img src="http://ojk2pwmrc.bkt.clouddn.com/17-3-1/91265361-file_1488379852922_4deb.jpg" alt=""></p>
+<hr>
+<p>在使用了一段时间后，我已经成为iHour的忠实粉丝了，每天看着各个目标的时间增加是一件很有成就感的事情。</p>
+<p>如果你也有想要努力达到的小目标，或者有想要坚持做下去的事，那么下载iHour，记录每天的进步，一定会是一个不错的选择！</p>
 
+
+                <hr>
+
+                
+                <!-- 多说 Share start -->
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="2017/03/01/iHour/"
+                    data-title="iHour：每天进步一点点"
+                    data-url="http://yoursite.com/2017/03/01/iHour/"
+                    data-images="http://yoursite.com/2017/03/01/iHour/iHour_bg.jpg"
+                    data-content="大学生涯迎来了最后一学期，为了让自己最后阶段的生活过得更加充实，我也是给自己设定了一些笼统的小... | 乐成的博客 | Dylan Blog " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/01/11/我的这一年/" data-toggle="tooltip" data-placement="top" title="我的这一年">下一篇</a>
+                        </li>
+                    
+                </ul>
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="2017/03/01/iHour/"
+                        data-title="iHour：每天进步一点点"
+                        data-url="http://yoursite.com/2017/03/01/iHour/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#产品相关" title="产品相关">产品相关</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>友情链接</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://pyxian.cn/" target="_blank">小鸡遛狗</a></li>
+                    
+                </ul>
+                
+            </div>
 
         </div>
     </div>
-</div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'lecheng';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
