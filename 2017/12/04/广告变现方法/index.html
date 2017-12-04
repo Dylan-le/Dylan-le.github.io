@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="undefined">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          移动应用如何有效地利用广告变现 - 乐成的博客 | 乐见其成
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/2017/12/04/广告变现方法/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">乐 见 其 成</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">归档</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">关于</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">标签</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('ad.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#商业相关" title="商业相关">商业相关</a>
+                        
+                    </div>
+                    <h1>移动应用如何有效地利用广告变现</h1>
+                    <h2 class="subheading">工作总结及一点思考</h2>
+                    <span class="meta">
+                        Posted by Dylan on
+                        2017-12-04
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>从目前来看，互联网产品最主要的变现方式有以下几种：</p>
+<blockquote>
+<ol>
+<li>广告变现，典型的如百度、微博等，广告收入在其总营收中占比很高</li>
+<li>增值服务变现，典型的如腾讯的绿钻、黄钻及游戏皮肤等</li>
+<li>电商变现，主要是导购及自营等模式，典型的如什么值得买、keep商城等</li>
+<li>游戏变现，在产品中植入游戏通过游戏道具等变现，当然这归根结底也属于增值服务变现的范畴</li>
+<li>收取交易撮合佣金，在O2O产品中比较常见，典型的如美团、滴滴打车等</li>
+<li>还有一些其他的变现模式，例如付费下载软件、金融变现等</li>
+</ol>
+</blockquote>
+<p>而这其中，又以广告变现最为普遍。大部分互联网公司都会采用广告变现作为自己的商业模式，像国内的百度、微博，国外的Google、Facebook等互联网公司，广告都为其贡献了绝大部分的收入。接下来就来聊一聊广告变现这件事~</p>
+<h2 id="广告变现"><a href="#广告变现" class="headerlink" title="广告变现"></a>广告变现</h2><p>广告变现，顾名思义也就是通过在自家产品上展示广告以获取收益的方法，这个方法也叫流量变现。</p>
+<p>最近我在使用知乎的时候能够明显的感觉到广告变多了，看来完成D轮融资后的知乎变现压力不小。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-57cbd4281a349257.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="知乎信息流中的广告"></p>
+<center><em>知乎信息流中的广告</em></center>
+
+<p>自从腾讯音乐和阿里音乐达成版权互换之后，网易云音乐的处境就比较尴尬，我喜欢的诸如王菲、李健、Mindy Gledhill的部分歌曲都不能听了，所以我自己打开网易云音乐的频次也少了一些。最近我打开网易云音乐的时候发现，它居然在搜索框的位置加了一个横幅广告位<em>（现在貌似已经下线了）</em>，而且现在在云音乐中点击签到后会自动跳转到它的积分商城，看来网易云音乐的变现压力也不小。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-b4aa25d12cf4b96b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="网易云音乐的搜索横幅广告"></p>
+<center><em>网易云音乐的搜索横幅广告</em></center>
+
+<p>忍不住再多说两句，在近期使用网易云音乐的过程中我发现，在失去了众多音乐版权之后，它自身也开始向内容方向转型了，包括强化了短视频和电台的入口、MV退出后自动跳转至短视频FEED流、首页Banner推广付费电台节目等动作，都可以看出网易云希望大家转移对于版权缺失的注意力，将用户吸引到更多的内容上来。</p>
+<p>说回广告变现这件事。</p>
+<p>从上面的例子可以看出，当一个互联网公司面临营收压力的时候，广告变现一般成了首选的商业变现模式。那么如何在自己的产品上更有效更优雅地利用广告变现呢？我根据自己一段时间以来的工作经验以及一些产品调研过程中发现的情况，总结了以下几点方法：</p>
+<h4 id="一、改造产品的核心使用路径"><a href="#一、改造产品的核心使用路径" class="headerlink" title="一、改造产品的核心使用路径"></a>一、改造产品的核心使用路径</h4><p>要让自己的产品采用广告变现的方式获得营收，首要的任务当然是加广告位，那么如何选择添加广告位的位置呢？在我看来，最主要的方法是首先梳理产品的核心使用路径，即大部分用户使用产品时的路径流程<em>（可以根据自己使用产品的体验定性分析，也可以通过数据分析来定量分析提取产品核心路径）</em>，然后对其进行改造，在合适的位置加上广告位。</p>
+<p>当然，这个过程中还需要满足一些基本的原则：例如广告不打断用户使用流程、不遮挡产品核心内容等。</p>
+<p>这里以清理类工具产品为例。</p>
+<p>用户使用清理类工具产品最主要目的是清理手机垃圾等，因此这类产品最核心的使用路径是：<strong>打开APP——点击清理按钮——选择要清理的内容——确认清理——清理完成</strong>。整个过程以清理完成为结束点，因此若要在这个路径上选择要添加广告位的位置，在满足不打断用户使用流程的前提下，最好的方法就是在清理完成的页面增加广告位，这种广告位也可以叫做结果页广告。</p>
+<p>在面向海外的清理类工具产品当中，像猎豹的Clean Master和360的360 security等，都普遍采用了这种广告位形式。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-2c51cc4d611be85d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Clean Master的结果页广告"></p>
+<center><em>Clean Master的结果页广告</em></center>
+
+<h4 id="二、不打断用户的使用体验"><a href="#二、不打断用户的使用体验" class="headerlink" title="二、不打断用户的使用体验"></a>二、不打断用户的使用体验</h4><p>其实在上一个方法中已经简单的提到这一点了，为什么还要单独拿出来说呢？因为这一点真的非常重要！</p>
+<p>用户体验是一个产品立身的根基，商业变现是一个产品能否延续的根本。在广告位的选择过程中需要满足尽量不打断用户使用体验的条件，将商业变现对于用户体验的影响降到最低，否则就会动摇到一个产品的根基，对于产品未来的发展是不利的。</p>
+<p>这里以一款游戏“疯狂动物园”为例。</p>
+<p>这是一款将模拟养成及跑酷相结合的游戏，用户在骑着动物跑酷的过程中，不断驯服新的动物、收集金币，以此来扩大自己的动物园。在跑酷过程中，用户如果撞到其他动物或物体死亡，这个时候会有观看视频广告获得一次继续跑酷机会的提示，<strong>而当用户点击了该按钮后，可直接继续游戏，视频广告则会在用户第二次死亡后才开始播放</strong>。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-1c66470f93dbe12f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="疯狂动物园的继续游戏视频广告"></p>
+<center><em>疯狂动物园的继续游戏视频广告</em></center>
+
+<p>在这款游戏2016年中旬刚推出的时候，我大概持续玩了两个月左右，当时主要吸引我的是它新奇的玩法，同时它在广告场景设置上的细节考虑也让我觉得很有意思。</p>
+<p><strong>我觉得这是一个不打断用户使用体验的典型例子</strong>。当用户选择了继续游戏时，整个产品的使用流程还没有结束，用户还处于比较兴奋与期待的状态，如果这个时候直接开始播放视频广告，那么当广告结束后用户的兴趣可能已经消退，从而选择直接退出游戏。</p>
+<h4 id="三、创造曝光广告位的使用场景"><a href="#三、创造曝光广告位的使用场景" class="headerlink" title="三、创造曝光广告位的使用场景"></a>三、创造曝光广告位的使用场景</h4><p>对于一些用户粘性不高的产品来说，除了改造产品的核心使用路径以外，还可以创造一些使用场景来增加广告位的曝光机会。</p>
+<p>还是以清理类工具产品为例。</p>
+<p>在第一点中已经提到了，这类产品的核心使用路径为：<strong>打开APP——点击清理按钮——选择要清理的内容——确认清理——清理完成</strong>，这个过程所需要的时间是很短的，用户在1分钟以内即可完成该路径并离开产品，用户的停留时间太短对于商业变现这件事来说是很不利的，如果采用广告变现的方法，那就意味着广告会缺少很多展示的机会，这也是很多工具类产品变现难的原因。</p>
+<p>因此对于这类产品来说，可以创造一些使用场景，例如自动检测用户手机，在垃圾过多或者温度过高时，给用户弹出一条通知提示，<strong>用户点击通知即可直接开始清理过程直至清理完成，然后结果页广告位获得曝光，从而增加广告位的展示机会</strong>。</p>
+<p>这其实也可以算作一种产品的运营手段，以此来增加用户打开产品的频次，在一定程度上提升产品的粘性。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-d805c63606e12cf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Clean Master的垃圾清理通知"></p>
+<center><em>Clean Master的垃圾清理通知</em></center>
+
+<h4 id="四、用好原生广告"><a href="#四、用好原生广告" class="headerlink" title="四、用好原生广告"></a>四、用好原生广告</h4><p>在我看来，原生广告简单来说就是一种与产品环境、内容融为一体的广告，在呈现上不会太突兀，能够将对用户体验的伤害降到最低，非常适合移动端环境呈现。</p>
+<p>原生广告在移动APP中已经越来越常见了，像是微博、今日头条等的信息流广告、微信的朋友圈广告、网易云音乐的首页Banner广告，甚至是各种APP的开屏广告、喜马拉雅一些节目开头的语音广告等，在我看来都可以看作是原生广告，由此可见原生广告的使用已经是非常普遍且形式多样的。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-09efddfc79bc1be2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微博信息流广告"></p>
+<center><em>微博信息流广告</em></center>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-e3c214ba5161801a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="网易云音乐首页Banner广告"></p>
+<center><em>网易云音乐首页Banner广告</em></center>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-55a55f4a6c0c07af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信朋友圈广告"></p>
+<center><em>微信朋友圈广告</em></center>
+
+<p><strong>原生广告严格来说包含表现原生和意图原生两方面</strong>，表现原生即广告的样式要和APP中的内容融为一体，做到展现上的不突兀；而意图原生则是要让广告的内容尽量符合产品的调性及用户的意图。例如在一个菜谱APP上展示洁厕灵的广告是不太合适的，再比如给一个生活在三亚的用户展示羽绒服的广告也是不太合适的。搜索引擎广告是一种典型的原生广告，既符合表现原生又符合意图原生，因为用户在搜索时本身就是有比较明确的意图的。</p>
+<p>表现上的原生是产品开发者自己可以控制的，但做到表现上的原生仅仅是一个基础。如何做到意图上的原生才是真正的难事，这需要大量用户行为数据及精准的广告推荐算法做支撑。对于大公司来说，可以通过自身积累的海量用户数据及广告推荐算法的研究尽可能去解决，但对于中小开发者来说，在自身没有那么多的用户数据积累及开发实力的情况下，选择一个好的广告平台就至关重要了，这也是要讲到的最后一点方法。</p>
+<h4 id="五、选择优秀的广告平台"><a href="#五、选择优秀的广告平台" class="headerlink" title="五、选择优秀的广告平台"></a>五、选择优秀的广告平台</h4><p>对于面向海外的开发者来说，可以尽量选择接入Facebook的Audience Network以及Google的Admob这种大型的广告平台，一方面是像Facebook及Google都有非常丰富的用户行为数据，另一方面是它们都有很强劲的广告算法技术，能够帮助开发者尽可能返回符合用户意图的广告。同时，它们都有很丰富的广告主来源，广告offer充足，能够在最大程度上保障广告的填充率，为开发者带来更多更稳定的收益。</p>
+<p>而对于面向国内市场的开发者来说，则可以尽量选择腾讯广告联盟及百度联盟等广告平台，理由和上面也是类似的。</p>
+<p>当然还有其他许多的广告平台，例如国外的mopub、ogury，国内的有米、多萌等，对于广告平台这一块我了解得还不是太多，这里就不再展开描述了，感兴趣的朋友也可以自己多去网上了解，甚至可以在自己的产品上直接尝试接入，对比一下各个平台的收入效果，从而选择最适合自己的广告平台。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-86cf1a73542962b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600" alt="腾讯广告联盟官网介绍"></p>
+<center><em>腾讯广告联盟官网介绍</em></center>
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>写到最后时我再往前翻，没想到写成了一篇长文，至于是不是干货就需要看到这篇文章的各位来判断了。</p>
+<p>其实以上的每一点方法都可以再展开讲很多的内容，像是核心路劲怎么找最准确？如何深挖更多的使用路径？如何更巧妙的设置广告出现的场景？增加广告位出现场景的方法还有哪些？怎么样的原生广告设计用户点击率是最高的？按钮大一点好还是小一点好？按钮颜色是蓝色好还是绿色好？接入哪种广告平台能够带来最好的收益？多种广告平台同时接入后如何才能做到收益最大化？这一系列问题都是可以继续探讨的，但碍于篇幅及自身经验的不足，就不继续展开了。感兴趣的朋友也欢迎留言讨论。</p>
+<p>一个产品要进行变现，最重要的还是要做好用户体验和商业变现之间的平衡，不能涸泽而渔，否则对于产品的可持续发展是非常不利的。同时希望用户也能对产品中的广告多一份理解<em>（虽然，这还比较困难）</em>，毕竟你免费使用了很棒的服务，而互联网公司也是需要生存的。</p>
+<p>这篇文章相当于我对工作一段时间以来的总结与思考，其中有些描述与理解可能还不太成熟，希望看到这篇文章的各位能够理解。如果这篇文章能够对你有帮助，那我觉得这篇文章就有它的价值了。</p>
+<p>谢谢你的阅读。</p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/11/06/RTB程序化广告交易/" data-toggle="tooltip" data-placement="top" title="RTB程序化广告交易">下一篇</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#商业相关" title="商业相关">商业相关</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>友情链接</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://pyxian.cn/" target="_blank">小鸡遛狗</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                <!-- SNS link -->
+                    
+
+                    
+                        <li>
+                            <a href="http://www.jianshu.com/u/15fb8c5df2c8" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="http://weibo.com/1640408560/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+                            
+                    
+                        <li>
+                            <a href="http://music.163.com/#/user/home?id=44926531" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-headphones fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                            
+                            
+                    
+                        <li>
+                            <a href="mailto:dlecheng@163.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 乐 见 其 成 2017
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a>
+                    <br>
+                    <!-- amazing counter -->
+                   <div align="center" style="font-size:15px">
+                        你是第 
+                        <a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3209305&c=9628228" style="height:12px"></a> 
+                        位访客！
+                       <br>
+                    </div>
+                </p>                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- 统计量 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
