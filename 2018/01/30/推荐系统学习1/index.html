@@ -13,11 +13,11 @@
 
     <title>
         
-          乐成的博客 | 乐见其成
+          推荐系统学习笔记1 - 乐成的博客 | 乐见其成
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/baidu_verify_EzBaIeEdq6.html">
+    <link rel="canonical" href="http://yoursite.com/2018/01/30/推荐系统学习1/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -150,175 +150,152 @@
 
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home.jpg')">
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('tuijian.jpg')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>乐 见 其 成</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">做一个有趣的人</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#读书" title="读书">读书</a>
+                        
+                          <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
+                        
+                    </div>
+                    <h1>推荐系统学习笔记1</h1>
+                    <h2 class="subheading">基础知识部分</h2>
+                    <span class="meta">
+                        Posted by Dylan on
+                        2018-01-30
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                EzBaIeEdq6
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-                <!-- 如果开启评论功能 -->
+                <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>大概是在2014年的时候，因为使用过一段时间的网易云音乐，我渐渐开始知道互联网里面有个性化推荐这么一个概念。再然后，随着今日头条的爆发，个性化推荐被越来越多的人与公司提及。</p>
+<p>工作以后，我接触到了一些产品商业化方面的知识，知道了广告变现的大致流程，同时也通过自己的了解，逐渐认识到广告平台其实也是个性化推荐应用的一个重要领域。</p>
+<p>在我的好奇心，以及自己知其然就想知其所以然的心理驱使下，我去了解了一些个性化推荐相关的内容，知道了一些个性化推荐当中用到的，像是协同过滤算法、基于内容的推荐算法等的基础知识。</p>
+<p>为了加深自己对个性化推荐的了解，我买了一本书——<a href="https://book.douban.com/subject/10769749/" target="_blank" rel="external">《推荐系统实践》（项亮著）</a>。这本书先是介绍了什么是推荐系统以及推荐系统的评测指标及方法，然后介绍了推荐系统常用的一些算法知识等，算是比较详细的介绍了推荐系统相关的知识。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2092603-0f2373c9814db76a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来自于豆瓣"></p>
+<p>我准备写几篇博客来巩固从书中了解到的知识（主要会以概念为主），这篇博客便是针对该书第一章相关知识的学习笔记。</p>
+<h4 id="什么是推荐系统？"><a href="#什么是推荐系统？" class="headerlink" title="什么是推荐系统？"></a>什么是推荐系统？</h4><p>推荐系统的主要任务是<strong>联系用户与信息</strong>，一方面帮助用户发现对自己有价值的信息，另一方面让信息呢能够展现在对它感兴趣的用户面签，从而实现信息消费者和信息生产者的双赢，而这里的信息可以是音乐、视频、商品和文章等等内容。</p>
+<p>推荐系统的成功应用有两个先决的条件，一是<strong>存在信息过载</strong>，二是<strong>用户没有明确的需求</strong>。</p>
+<p>为了解决信息过载的问题，人们曾提出过比较有代表性的分类目录和搜索引擎解决方案，前者的主要代表是雅虎和Hao123，后者的主要代表是谷歌和百度。随着互联网规模的不断扩大，分类网站只能覆盖少量热门网站的形态越来越不能满足用户的需求；同时，搜索引擎在用户不能准备提供需求关键词的情况下，显得比较无能为力。</p>
+<p>而推荐系统不需要用户提供明确的需求，而是通过分析用户的历史行为来给用户的兴趣建模，从而主动给用户推荐能够满足他们兴趣和需求的信息。同时，推荐系统通过发掘用户的行为，找到用户的个性化需求，从而能够将长尾的商品准确地推荐给需要它的用户，帮助用户发现那些他们感兴趣但很难发现的商品。</p>
+<h4 id="个性化推荐系统的主要应用"><a href="#个性化推荐系统的主要应用" class="headerlink" title="个性化推荐系统的主要应用"></a>个性化推荐系统的主要应用</h4><ul>
+<li><strong>电子商务：</strong> 亚马逊</li>
+<li><strong>电影和视频网站：</strong> Netflix、Youtube、Hulu</li>
+<li><strong>个性化音乐网络电台：</strong> Pandora、Last.fm、豆瓣Fm</li>
+<li><strong>社交网络：</strong> Facebook、Twitter</li>
+<li><strong>个性化阅读：</strong> Google Reader、Zite、Digg、今日头条</li>
+<li><strong>基于位置的服务：</strong> Foursquare</li>
+<li><strong>个性化邮件：</strong> Gmail优先级邮箱</li>
+<li><strong>个性化广告：</strong> Facebook Audience Network</li>
+</ul>
+<h4 id="音乐推荐的特殊性"><a href="#音乐推荐的特殊性" class="headerlink" title="音乐推荐的特殊性"></a>音乐推荐的特殊性</h4><ul>
+<li><strong>物品空间大：</strong> 音乐数量很多，空间很大（相对于书和电影）</li>
+<li><strong>消费每首歌的代价很小：</strong> 对在线音乐来说，音乐大部分都是免费的</li>
+<li><strong>物品种类丰富：</strong> 音乐种类丰富，有很多的流派</li>
+<li><strong>听一首歌耗时很少：</strong> 听一首歌的时间成本很低，不太浪费用户的时间</li>
+<li><strong>物品重用率很高：</strong> 一首歌用户可能会听很多遍，这与电影与书不同</li>
+<li><strong>用户充满激情：</strong> 用户很有激情，一个用户可能会听很多歌</li>
+<li><strong>上下文相关：</strong> 用户的口味很受当时上下文的影响，主要指用户当时的心情与所处的情景</li>
+<li><strong>次序很重要：</strong> 用户听音乐一般会按照一定的次序一首一首地听</li>
+<li><strong>很多播放列表资源：</strong> 用户可能会创建很多个人播放列表（歌单）</li>
+<li><strong>不需要用户全神贯注：</strong> 音乐不需要用户全神贯注地听，背景声音属性较强</li>
+<li><strong>高度社会化：</strong> 用户听音乐的行为有很强的社会化特性，例如我们会和好友互相分享喜欢的音乐</li>
+</ul>
+<h4 id="推荐系统的评测指标"><a href="#推荐系统的评测指标" class="headerlink" title="推荐系统的评测指标"></a>推荐系统的评测指标</h4><ul>
+<li><p><strong>用户满意度</strong><br>用户的主观感受，主要通过用户问卷调研的形式获得，同时也可通过一些客观评测指标，例如产品反馈按钮的点击率、用户停留时长和转化率等来获得</p>
+</li>
+<li><p><strong>预测准确度</strong><br>主要用来衡量一个推荐系统预测用户行为的能力。评分预测的预测准确度一般通过计算测试集和训练集的均方根误差(RMSE)和平均绝对误差(MAE)得到。TopN推荐的预测准确度一般通过计算测试集和训练集的准确率(precison)和召回率(recall)得到。</p>
+</li>
+<li><p><strong>覆盖率</strong><br>主要用来描述一个推荐系统对物品长尾的发掘能力。可以通过推荐出来的物品占总物品的比例来进行计算。</p>
+</li>
+<li><p><strong>多样性</strong><br>推荐列表需要满足用户广泛的兴趣。</p>
+</li>
+<li><p><strong>新颖性</strong><br>给用户推荐那些他们没有听说过的物品的能力。可以利用推荐结果的平均流行度来进行评测。</p>
+</li>
+<li><p><strong>惊喜度</strong><br>如果推荐结果和用户的历史兴趣不相似，但却让用户觉得满意，那么可以说推荐结果的惊喜度很高。</p>
+</li>
+<li><p><strong>信任度</strong><br>增加用户对于推荐系统的信任度，能够让用户更多的与推荐系统产生交互。可以通过增加推荐理由，或是引入用户的好友关系等来增加用户的信任度。</p>
+</li>
+<li><p><strong>实时性</strong><br>一些新闻类推荐产品需要满足实时性的需求。可以通过推荐系统是否能将新加入系统中的物品推荐给用户来评测。</p>
+</li>
+<li><p><strong>健壮性</strong><br>衡量一个推荐系统抗作弊的能力。</p>
+</li>
+<li><p><strong>商业目标</strong><br>不同的商业目标推荐系统的设计方向不同，因此在设计推荐系统时也需要考虑商业目标。</p>
+</li>
+</ul>
+
+
+                <hr>
+
                 
-                    <hr>
 
+                <ul class="pager">
                     
-
                     
-
-
+                        <li class="next">
+                            <a href="/2018/01/28/厘米秀/" data-toggle="tooltip" data-placement="top" title="厘米秀产品体验">下一篇</a>
+                        </li>
                     
+                </ul>
 
-                    
-
-
+                
 
                 
 
             </div>
+    <!-- Side Catalog Container -->
+        
+
     <!-- Sidebar Container -->
+
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
                 <section>
                     <!-- no hr -->
                     <h5><a href="/tags/">标签</a></h5>
                     <div class="tags">
+                       
+                          <a class="tag" href="/tags/#读书" title="读书">读书</a>
                         
-                            
-                            <a href="/tags/#读书" title="读书" rel="4">读书</a>
-                            
-                        
-                            
-                            <a href="/tags/#APP推荐" title="APP推荐" rel="3">APP推荐</a>
-                            
-                        
-                            
-                            <a href="/tags/#闲谈" title="闲谈" rel="4">闲谈</a>
-                            
-                        
-                            
-                            <a href="/tags/#音乐相关" title="音乐相关" rel="4">音乐相关</a>
-                            
-                        
-                            
-                            <a href="/tags/#产品相关" title="产品相关" rel="5">产品相关</a>
-                            
-                        
-                            
-                            <a href="/tags/#商业相关" title="商业相关" rel="2">商业相关</a>
-                            
-                        
-                            
-                            <a href="/tags/#产品体验" title="产品体验" rel="1">产品体验</a>
-                            
-                        
-                            
-                            <a href="/tags/#推荐系统" title="推荐系统" rel="1">推荐系统</a>
-                            
+                          <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
                         
                     </div>
                 </section>
                 
 
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">关于</a></h5>
-                    <div class="short-about">
-
-                        
-                            <img src="/img/avatar.jpg" />
-                        
-
-                        
-                            <p>To Be A Better Man</p>
-                        
-
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                        
-                    
-
-                    
-                        <li>
-                            <a href="http://www.jianshu.com/u/15fb8c5df2c8" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-book fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-
-                    
-                        <li>
-                            <a href="http://weibo.com/1640408560/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-                            
-                    
-                        <li>
-                            <a href="http://music.163.com/#/user/home?id=44926531" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-headphones fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                            
-                            
-                    
-                        <li>
-                            <a href="mailto:dlecheng@163.com" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-
-                        </ul>
-                    </div>
-                </section>
-                
                 <!-- Friends Blog -->
                 
                 <hr>
@@ -331,9 +308,51 @@
                 </ul>
                 
             </div>
-        
+
+        </div>
     </div>
-</div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
