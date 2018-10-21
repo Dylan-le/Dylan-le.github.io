@@ -18,7 +18,7 @@
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/2018/01/30/推荐系统学习1/">
+    <link rel="canonical" href="http://yoursite.com/2018/05/30/推荐系统学习1/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -101,14 +101,14 @@
 
                         
                         <li>
-                            <a href="/tags/">标签</a>
+                            <a href="/about/">关于</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">关于</a>
+                            <a href="/tags/">标签</a>
                         </li>
                         
                     
@@ -178,7 +178,7 @@
                     <h2 class="subheading">基础知识部分</h2>
                     <span class="meta">
                         Posted by Dylan on
-                        2018-01-30
+                        2018-05-30
                     </span>
                 </div>
             </div>
@@ -197,12 +197,9 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>大概是在2014年的时候，因为使用过一段时间的网易云音乐，我渐渐开始知道互联网里面有个性化推荐这么一个概念。再然后，随着今日头条的爆发，个性化推荐被越来越多的人与公司提及。</p>
-<p>工作以后，我接触到了一些产品商业化方面的知识，知道了广告变现的大致流程，同时也通过自己的了解，逐渐认识到广告平台其实也是个性化推荐应用的一个重要领域。</p>
-<p>在我的好奇心，以及自己知其然就想知其所以然的心理驱使下，我去了解了一些个性化推荐相关的内容，知道了一些个性化推荐当中用到的，像是协同过滤算法、基于内容的推荐算法等的基础知识。</p>
-<p>为了加深自己对个性化推荐的了解，我买了一本书——<a href="https://book.douban.com/subject/10769749/" target="_blank" rel="external">《推荐系统实践》（项亮著）</a>。这本书先是介绍了什么是推荐系统以及推荐系统的评测指标及方法，然后介绍了推荐系统常用的一些算法知识等，算是比较详细的介绍了推荐系统相关的知识。</p>
+                <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>因为工作的缘故，包括商业广告还有信息流分发小程序等，我逐渐接触到了一些个性化推荐相关的事。为了加深自己对个性化推荐的了解，我买了一本书——<a href="https://book.douban.com/subject/10769749/" target="_blank" rel="external">《推荐系统实践》（项亮著）</a>。这本书先是介绍了什么是推荐系统以及推荐系统的评测指标及方法，然后介绍了推荐系统常用的一些算法知识等，算是比较详细的介绍了推荐系统相关的知识。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2092603-0f2373c9814db76a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来自于豆瓣"></p>
-<p>我准备写几篇博客来巩固从书中了解到的知识（主要会以概念为主），这篇博客便是针对该书第一章相关知识的学习笔记。</p>
+<p>我准备用博客，记录自己的学习笔记</p>
 <h4 id="什么是推荐系统？"><a href="#什么是推荐系统？" class="headerlink" title="什么是推荐系统？"></a>什么是推荐系统？</h4><p>推荐系统的主要任务是<strong>联系用户与信息</strong>，一方面帮助用户发现对自己有价值的信息，另一方面让信息呢能够展现在对它感兴趣的用户面签，从而实现信息消费者和信息生产者的双赢，而这里的信息可以是音乐、视频、商品和文章等等内容。</p>
 <p>推荐系统的成功应用有两个先决的条件，一是<strong>存在信息过载</strong>，二是<strong>用户没有明确的需求</strong>。</p>
 <p>为了解决信息过载的问题，人们曾提出过比较有代表性的分类目录和搜索引擎解决方案，前者的主要代表是雅虎和Hao123，后者的主要代表是谷歌和百度。随着互联网规模的不断扩大，分类网站只能覆盖少量热门网站的形态越来越不能满足用户的需求；同时，搜索引擎在用户不能准备提供需求关键词的情况下，显得比较无能为力。</p>
@@ -230,6 +227,34 @@
 <li><strong>不需要用户全神贯注：</strong> 音乐不需要用户全神贯注地听，背景声音属性较强</li>
 <li><strong>高度社会化：</strong> 用户听音乐的行为有很强的社会化特性，例如我们会和好友互相分享喜欢的音乐</li>
 </ul>
+<h4 id="推荐系统实验方法"><a href="#推荐系统实验方法" class="headerlink" title="推荐系统实验方法"></a>推荐系统实验方法</h4><ul>
+<li><strong>离线实验</strong></li>
+</ul>
+<p>主要包括以下几个步骤：</p>
+<ol>
+<li>通过日志系统获得用户行为数据，并按照一定格式生成一个标准的数据集</li>
+<li>将数据集按照一定的规则分成训练集和测试集</li>
+<li>在训练集上训练用户兴趣模型，在测试集上进行预测</li>
+<li>通过事先定义的离线指标评测算法在测试集上的预测结果</li>
+</ol>
+<p><img src="https://upload-images.jianshu.io/upload_images/2092603-2bd82f4bb6631dc5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="离线实验的优缺点"></p>
+<ul>
+<li><strong>用户调查</strong></li>
+</ul>
+<p><strong>优点：</strong></p>
+<ol>
+<li>可以获得很多体现用户主管感受的指标</li>
+<li>相对在线实验风险很低，出现出错误后很容易弥补</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>招募测试用户代价较大，很难组织大规模的测试用户</li>
+<li>设计双盲实验（不让实验人员和用户事先知道测试目标，避免用户的回答和实验人员的测试受主观成分影响）非常困难，且用户在测试环境下的行为和真实环境下的行为可能有所不同</li>
+</ol>
+<ul>
+<li><strong>在线实验（AB测试）</strong></li>
+</ul>
+<p>通过一定的规则将用户随机分成几组，并对不同组的用户采用不同的算法，然后通过统计不同组用户的各种不同评测指标比较不同算法的性能</p>
 <h4 id="推荐系统的评测指标"><a href="#推荐系统的评测指标" class="headerlink" title="推荐系统的评测指标"></a>推荐系统的评测指标</h4><ul>
 <li><p><strong>用户满意度</strong><br>用户的主观感受，主要通过用户问卷调研的形式获得，同时也可通过一些客观评测指标，例如产品反馈按钮的点击率、用户停留时长和转化率等来获得</p>
 </li>
@@ -261,12 +286,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2018/03/13/小游戏与instant-games/" data-toggle="tooltip" data-placement="top" title="微信小游戏与instant games">上一篇</a>
+                            <a href="/2018/06/15/推荐系统学习笔记2/" data-toggle="tooltip" data-placement="top" title="推荐系统学习笔记2">上一篇</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2018/01/28/厘米秀/" data-toggle="tooltip" data-placement="top" title="厘米秀产品体验">下一篇</a>
+                            <a href="/2018/03/13/小游戏与instant-games/" data-toggle="tooltip" data-placement="top" title="微信小游戏与instant games">下一篇</a>
                         </li>
                     
                 </ul>

@@ -14,11 +14,11 @@
 
     <title>
         
-          乐成的博客 | 乐见其成
+          推荐系统学习笔记2 - 乐成的博客 | 乐见其成
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/i_dont_wanna_use_default_archives/2017/01/">
+    <link rel="canonical" href="http://yoursite.com/2018/06/15/推荐系统学习笔记2/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -151,7 +151,210 @@
 
 
     <!-- Main Content -->
-    <!-- Default Archive layout, we use archives instead. -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('tuijian.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#读书" title="读书">读书</a>
+                        
+                          <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
+                        
+                    </div>
+                    <h1>推荐系统学习笔记2</h1>
+                    <h2 class="subheading">基于邻域的推荐算法</h2>
+                    <span class="meta">
+                        Posted by Dylan on
+                        2018-06-15
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="基于用户的协同过滤算法"><a href="#基于用户的协同过滤算法" class="headerlink" title="基于用户的协同过滤算法"></a>基于用户的协同过滤算法</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h4><blockquote>
+<p>在一个在线个性化推荐系统中，当一个用户A需要个性化推荐时，可以先找到和他有相似兴趣的其他用户，然后把那些用户喜欢的、而用户A没有听说过的物品推荐给A。这种方法称为基于用户的协同过滤算法（userCF）</p>
+</blockquote>
+<h4 id="2-两个主要步骤"><a href="#2-两个主要步骤" class="headerlink" title="2. 两个主要步骤"></a>2. 两个主要步骤</h4><ul>
+<li>找到和目标用户兴趣相似的用户集合<blockquote>
+<p>利用行为相似度（用户对某个物品产生正反馈）计算用户相似度</p>
+</blockquote>
+</li>
+<li>找到这个集合中的用户喜欢的，且目标用户没有听说过的物品推荐给目标用户</li>
+</ul>
+<h4 id="3-算法的改进"><a href="#3-算法的改进" class="headerlink" title="3. 算法的改进"></a>3. 算法的改进</h4><p>更精准的相似度判定：如果两个用户对冷门物品采取过同样的行为，更能说明他们的兴趣相似度</p>
+<h4 id="4-缺点"><a href="#4-缺点" class="headerlink" title="4. 缺点"></a>4. 缺点</h4><ul>
+<li>随着网站的用户数目越来越大，计算用户兴趣相似度矩阵将越来越困难，其运算时间复杂度和空间呢复杂度的增长和用户数的增长近似于平方关系</li>
+<li>基于用户的协同过滤算法很难对推荐结果做出解释</li>
+</ul>
+<h3 id="基于物品的协同过滤算法"><a href="#基于物品的协同过滤算法" class="headerlink" title="基于物品的协同过滤算法"></a>基于物品的协同过滤算法</h3><h4 id="1-定义-1"><a href="#1-定义-1" class="headerlink" title="1. 定义"></a>1. 定义</h4><blockquote>
+<p>基于物品的协同过滤算法（itemCF）为用户推荐那些和他们之前喜欢的物品相似的物品</p>
+</blockquote>
+<h4 id="2-物品相似度的规则"><a href="#2-物品相似度的规则" class="headerlink" title="2. 物品相似度的规则"></a>2. 物品相似度的规则</h4><ul>
+<li>不利用物品的内容属性计算物品之间的相似度，主要通过分析用户的行为记录计算物品之间的相似度</li>
+<li>物品A和物品B具有很大的相似度是因为喜欢物品A的用户大都也喜欢物品B</li>
+<li>在协同过滤中，两个物品产生相似度是因为它们共同被很多用户喜欢，也就是说每个用户都可以通过他们的历史兴趣列表给物品“贡献”相似度</li>
+</ul>
+<h4 id="3-两个主要步骤"><a href="#3-两个主要步骤" class="headerlink" title="3. 两个主要步骤"></a>3. 两个主要步骤</h4><ul>
+<li>计算物品之间的相似度</li>
+<li>根据物品的相似度和用户的历史行为给用户生成推荐列表<blockquote>
+<p>和用户历史上感兴趣的物品越相似的物品，越有可能在用户的推荐列表中获得比较高的排名</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="4-算法的改进"><a href="#4-算法的改进" class="headerlink" title="4. 算法的改进"></a>4. 算法的改进</h4><ul>
+<li>活跃用户对于物品相似度的贡献应该小于不活跃的用户</li>
+<li>对于过于活跃的用户，为了避免相似度矩阵过于稠密，在实际计算中一般直接忽略其兴趣列表，不将其纳入到相似度的计算数据集中</li>
+<li>物品相似度的归一化<blockquote>
+<p>一般来说，热门的类其类内物品相似度一般比较大，如果不进行归一化，就会推荐比较热门的类里面的物品，而这些物品本身就是比较热门的，因此推荐的覆盖率就比较低。相反，如果进行相似度的归一化，则可以提高推荐系统内的覆盖率</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="UserCF和ItemCF的综合比较"><a href="#UserCF和ItemCF的综合比较" class="headerlink" title="UserCF和ItemCF的综合比较"></a>UserCF和ItemCF的综合比较</h3><p><strong>1. UserCF的推荐结果着重于反应和用户兴趣相似的小群体的热点，ItemCF的推荐结果着重于维系用户的历史兴趣</strong></p>
+<p><strong>2. UserCF的推荐更社会化，反映了用户所在的小型兴趣群体中物品的热门程度，而ItemCF的推荐更加个性化，反映了用户自己的兴趣传承</strong></p>
+<p><strong>3. UserCF比较适合用于新闻推荐，原因如下：</strong></p>
+<ul>
+<li>个性化新闻推荐更加强调新闻热点，热门程度和时效性是个新年规划新闻推荐的重点，而个性化想你对于这两点略显次要，因此，UserCF可以给用户推荐和他有相似爱好的一群其他用户今天都在看的新闻，这样在抓住后热点和时效性的同事，保证了一定程度的个性化</li>
+<li>在新闻网站中，物品的更新速度远远快于新用户的加入速度，而实现物品相关度表的快速更新，在技术上是很难实现的。对于新用户来说，完全可以为其推荐最热门的新闻</li>
+</ul>
+<p><strong>4.ItemCF比较适用于图书、电子商务和电影网站等，比如亚马逊、豆瓣、Netflix等，原因如下：</strong></p>
+<ul>
+<li>在这些网站中，用户兴趣是比较固定和持久的</li>
+<li>这些网站中，物品的更新速度不会特别快，一天一次更新物品相似度矩阵不会造成太大的损失，是可以接受的</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/2092603-b98ffcbc40c89861.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="UserCF和ItemCF优缺点对比表"></p>
+<center> <em>UserCF和ItemCF优缺点对比表</em> </center>
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2018/09/25/LiveHouse-in-BeiJing/" data-toggle="tooltip" data-placement="top" title="北京那些LiveHouse">上一篇</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2018/05/30/推荐系统学习1/" data-toggle="tooltip" data-placement="top" title="推荐系统学习笔记1">下一篇</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#读书" title="读书">读书</a>
+                        
+                          <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>友情链接</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://pyxian.cn/" target="_blank">小鸡遛狗</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
 
     <!-- Footer -->
     <!-- Footer -->
