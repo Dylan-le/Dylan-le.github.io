@@ -14,11 +14,11 @@
 
     <title>
         
-          乐成的博客 | 乐见其成
+          推荐系统学习笔记4 - 乐成的博客 | 乐见其成
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/i_dont_wanna_use_default_archives/2017/01/">
+    <link rel="canonical" href="http://yoursite.com/2018/07/15/推荐系统学习笔记4/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -151,7 +151,190 @@
 
 
     <!-- Main Content -->
-    <!-- Default Archive layout, we use archives instead. -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('tuijian.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#读书" title="读书">读书</a>
+                        
+                          <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
+                        
+                    </div>
+                    <h1>推荐系统学习笔记4</h1>
+                    <h2 class="subheading">准确率与召回率</h2>
+                    <span class="meta">
+                        Posted by Dylan on
+                        2018-07-15
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>在《推荐系统实践》这本书中，将评测推荐算法精度的指标——准确率和召回率定义为：</p>
+<p><strong>召回率</strong></p>
+<blockquote>
+<p>描述有多少比例的用户—物品评分记录包含在最终的推荐列表中</p>
+</blockquote>
+<p><strong>准确率</strong></p>
+<blockquote>
+<p>描述最终的推荐列表中有多少比例是发生过的物品—评分记录</p>
+</blockquote>
+<p>说实话，我感觉这两句话真的有点难看懂…</p>
+<p>在网上搜寻了一番，我发现了一个对于准确率与召回率比较通俗易懂的解释，不过这篇文章讲到的准确率与召回率的概念，更偏向于信息检索领域，原文在这里：<a href="http://bookshadow.com/weblog/2014/06/10/precision-recall-f-measure/" target="_blank" rel="external">推荐系统评测指标—准确率(Precision)、召回率(Recall)、F值(F-Measure) </a></p>
+<p>这篇文章中，对于准确率和召回率的定义为：</p>
+<ol>
+<li>准确率 = 提取出的正确信息条数/提取出的信息条数</li>
+<li>召回率 = 提取出的正确信息条数/样本中的信息条数</li>
+</ol>
+<p>对应到推荐算法的概念中，我觉得可以理解为：</p>
+<ol>
+<li>准确率 = 推荐列表中用户喜欢的物品数/推荐列表的物品总数</li>
+<li>召回率 = 推荐列表中用户喜欢的物品数/用户喜欢的物品总数</li>
+</ol>
+<p>同时，这篇文章中所举的一个关于捕鱼的例子，相对来说更能准确通俗的解释准确率与召回率的概念</p>
+<hr>
+<p><strong>例子如下：</strong></p>
+<p>某池塘有1400条鲤鱼，300只虾，300只鳖。现在以捕鲤鱼为目的。撒一大网，逮着了700条鲤鱼，200只虾，100只鳖。那么，这些指标分别如下：</p>
+<p>准确率 = 700 / (700 + 200 + 100) = 70%</p>
+<p>召回率 = 700 / 1400 = 50%</p>
+<p>不妨看看如果把池子里的所有的鲤鱼、虾和鳖都一网打尽，这些指标又有何变化：</p>
+<p>正确率 = 1400 / (1400 + 300 + 300) = 70%</p>
+<p>召回率 = 1400 / 1400 = 100%</p>
+<p>由此可见，准确率是评估捕获的成果中目标成果所占得比例；召回率，顾名思义，就是从关注领域中，召回目标类别的比例。</p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2018/07/22/推荐系统学习笔记5/" data-toggle="tooltip" data-placement="top" title="推荐系统学习笔记5">上一篇</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2018/07/10/推荐系统学习笔记3/" data-toggle="tooltip" data-placement="top" title="推荐系统学习笔记3">下一篇</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">标签</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#读书" title="读书">读书</a>
+                        
+                          <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>友情链接</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://pyxian.cn/" target="_blank">小鸡遛狗</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
 
     <!-- Footer -->
     <!-- Footer -->
