@@ -14,11 +14,11 @@
 
     <title>
         
-          乐成的博客 | 乐见其成
+          推荐系统学习笔记7 - 乐成的博客 | 乐见其成
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/baidu_verify_EzBaIeEdq6.html">
+    <link rel="canonical" href="http://yoursite.com/2018/09/09/推荐系统学习笔记7/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -151,179 +151,131 @@
 
 
     <!-- Main Content -->
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home.jpg')">
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('tuijian.jpg')
+    }
+</style>
+<header class="intro-header" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>乐 见 其 成</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">做一个有趣的人</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#读书" title="读书">读书</a>
+                        
+                          <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
+                        
+                    </div>
+                    <h1>推荐系统学习笔记7</h1>
+                    <h2 class="subheading">利用社交网络推荐</h2>
+                    <span class="meta">
+                        Posted by Dylan on
+                        2018-09-09
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                EzBaIeEdq6
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-                <!-- 如果开启评论功能 -->
+                <h3 id="基于社交网络的推荐"><a href="#基于社交网络的推荐" class="headerlink" title="基于社交网络的推荐"></a>基于社交网络的推荐</h3><p>社会化推荐之所以受到很多网站的重视，主要源于以下优点：</p>
+<ul>
+<li><p>好友推荐可以增加推荐的信任度</p>
+<p>  好友往往是用户最信任的。用户往往不一定信任计算机的智能，但会信任好朋友的推荐</p>
+</li>
+<li><p>社交网络可以解决冷启动问题</p>
+<p>  当一个新用户通过微博或者Facebook账号登录网站时，我们可以从社交网络中和获取用户的好友列表，然后给用户推荐好友在网站上喜欢的物品</p>
+</li>
+</ul>
+<p>社会化推荐的优势不在于增加预测准确度，而是在于通过用户的好友增加用户对推荐结果的信任度</p>
+<h4 id="基于领域的社会化推荐算法"><a href="#基于领域的社会化推荐算法" class="headerlink" title="基于领域的社会化推荐算法"></a>基于领域的社会化推荐算法</h4><p>如果给定一个社交网络和一份用户行为数据集。其中社交网络定义了用户之间的好友关系，而用户行为数据集定义了不同历史的用户行为和兴趣数据。那么最简单的算法是给用户推荐好友喜欢的物品集合</p>
+<h5 id="需要考虑的点"><a href="#需要考虑的点" class="headerlink" title="需要考虑的点"></a>需要考虑的点</h5><p>即使是同一个用户的好友，但不同好友和该用户的熟悉程度和兴趣相似度也是不同的</p>
+<ul>
+<li><p>好友和用户的熟悉程度</p>
+<p>  一般来说，用户更加相信自己熟悉的好友的推荐，因此需要考虑用户之间的熟悉度。熟悉度可以用用户之间的<strong>共同好友比例</strong>来度量</p>
+</li>
+<li><p>好友和用户的兴趣相似度</p>
+<p>  如果两个用户喜欢的物品集合重合度很高，两个用户的兴趣相似度很高</p>
+</li>
+</ul>
+<h3 id="给用户推荐好友"><a href="#给用户推荐好友" class="headerlink" title="给用户推荐好友"></a>给用户推荐好友</h3><p>好友关系是社会化网站的重要组成部分，如果用户的好友稀少，则不能体验到社会化的好处。因此好友推荐是社会化网站的重要应用之一。</p>
+<p>好友推荐系统的目的是根据用户现有的好友、用户的行为记录给用南湖推荐新的好友，从而增加整个社交网络的稠密程度和社交网络用户的活跃度</p>
+<h4 id="基于内容的匹配"><a href="#基于内容的匹配" class="headerlink" title="基于内容的匹配"></a>基于内容的匹配</h4><p>给用户推荐和他们有相似内容属性的用户作为好友</p>
+<ul>
+<li>用户人口统计学属性，包括年龄、性别、职业、毕业学校和工作单位等</li>
+<li>用户的兴趣，包括用户喜欢的物品和发布过的言论等</li>
+<li>用户的位置信息，包括用户的住址、IP地址和邮编等</li>
+</ul>
+<h4 id="基于共同兴趣的好友推荐"><a href="#基于共同兴趣的好友推荐" class="headerlink" title="基于共同兴趣的好友推荐"></a>基于共同兴趣的好友推荐</h4><p>利用UserCF的思想，如果用户喜欢相同的物品，则说明他们具有相似的兴趣</p>
+<h4 id="基于社交网络图的好友推荐"><a href="#基于社交网络图的好友推荐" class="headerlink" title="基于社交网络图的好友推荐"></a>基于社交网络图的好友推荐</h4><p>在社交网络中，我们会获得用户之间现有的社交网络图，然后可以基于现有的社交网络给用户推荐新的好友，比如可以<strong>给用户推荐好友的好友</strong></p>
+
+
+                <hr>
+
                 
-                    <hr>
 
+                <ul class="pager">
                     
-
+                        <li class="previous">
+                            <a href="/2018/12/23/LiveHouse-in-BeiJing/" data-toggle="tooltip" data-placement="top" title="北京那些LiveHouse">上一篇</a>
+                        </li>
                     
-
-
                     
-
+                        <li class="next">
+                            <a href="/2018/08/12/推荐系统学习笔记6/" data-toggle="tooltip" data-placement="top" title="推荐系统学习笔记6">下一篇</a>
+                        </li>
                     
+                </ul>
 
-
+                
 
                 
 
             </div>
+    <!-- Side Catalog Container -->
+        
+
     <!-- Sidebar Container -->
+
             <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
                 <!-- Featured Tags -->
                 
                 <section>
                     <!-- no hr -->
                     <h5><a href="/tags/">标签</a></h5>
                     <div class="tags">
+                       
+                          <a class="tag" href="/tags/#读书" title="读书">读书</a>
                         
-                            
-                            <a href="/tags/#读书" title="读书" rel="10">读书</a>
-                            
-                        
-                            
-                            <a href="/tags/#APP推荐" title="APP推荐" rel="3">APP推荐</a>
-                            
-                        
-                            
-                            <a href="/tags/#闲谈" title="闲谈" rel="4">闲谈</a>
-                            
-                        
-                            
-                            <a href="/tags/#音乐相关" title="音乐相关" rel="4">音乐相关</a>
-                            
-                        
-                            
-                            <a href="/tags/#产品相关" title="产品相关" rel="6">产品相关</a>
-                            
-                        
-                            
-                            <a href="/tags/#商业相关" title="商业相关" rel="2">商业相关</a>
-                            
-                        
-                            
-                            <a href="/tags/#调研报告" title="调研报告" rel="2">调研报告</a>
-                            
-                        
-                            
-                            <a href="/tags/#产品体验" title="产品体验" rel="2">产品体验</a>
-                            
-                        
-                            
-                            <a href="/tags/#推荐系统" title="推荐系统" rel="7">推荐系统</a>
-                            
+                          <a class="tag" href="/tags/#推荐系统" title="推荐系统">推荐系统</a>
                         
                     </div>
                 </section>
                 
 
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="/about/">关于</a></h5>
-                    <div class="short-about">
-
-                        
-                            <img src="/img/avatar.jpg" />
-                        
-
-                        
-                            <p>To Be A Better Man</p>
-                        
-
-                        <!-- SNS Link -->
-                        <ul class="list-inline">
-                        
-                    
-
-                    
-                        <li>
-                            <a href="http://www.jianshu.com/u/15fb8c5df2c8" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-book fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-
-                    
-                        <li>
-                            <a href="http://weibo.com/1640408560/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-                            
-                    
-                        <li>
-                            <a href="http://music.163.com/#/user/home?id=44926531" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-headphones fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                            
-                            
-                    
-                        <li>
-                            <a href="mailto:dlecheng@163.com" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-
-                        </ul>
-                    </div>
-                </section>
-                
                 <!-- Friends Blog -->
                 
                 <hr>
@@ -336,9 +288,51 @@
                 </ul>
                 
             </div>
-        
+
+        </div>
     </div>
-</div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
 
 
     <!-- Footer -->
